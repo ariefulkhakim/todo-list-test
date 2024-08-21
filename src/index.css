@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 227 14% 13%;
+    --primary: 243 100% 69%;
+    --primary-foreground: 243 42% 83%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+  }
+
+  .dark {
+    --background: 0 0% 15%;
+    --foreground: 210 40% 98%;
+    --primary: 243 100% 69%;
+    --primary-foreground: 243 42% 83%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  body {
+    font-family: "Kanit", sans-serif;
+    @apply bg-background;
+    color: #252525;
+  }
+
+  .dark {
+    color: #f7f7f7;
+  }
+
+  button,
+  select {
+    @apply bg-primary;
+    color: hsl(0 0% 97%);
+    border-radius: 5px !important;
+    padding: 10px !important;
+    border: 1px solid transparent;
+  }
+
+  input,
+  textarea {
+    border: 1px solid hsl(var(--primary));
+    background-color: transparent;
+    border-radius: 5px !important;
+    width: 100%;
+    padding: 8px 16px 8px 16px;
+  }
+
+  input:focus-visible {
+    outline: hsl(var(--primary)) auto 1px;
+  }
+
+  input[type="checkbox"] {
+    accent-color: hsl(var(--primary));
+  }
+
+  input::placeholder {
+    font-size: 16px;
+    color: hsla(243, 42%, 83%, 1);
+  }
+
+  label {
+    margin-bottom: 4px;
+  }
+
+  .dark label,
+  .dark .search-custom-icon {
+    color: #f7f7f7;
+  }
+
+  .dark input,
+  .dark textarea {
+    border-color: hsl(0 0% 97%);
+    color: hsl(0 0% 97%);
+  }
+
+  .dark .text-todo-item {
+    color: #ffffff80;
+  }
+
+  .dark .modal-custom {
+    background-color: #252525;
+  }
+
+  .dark .modal-custom h2 {
+    color: #f7f7f7;
+  }
+}
