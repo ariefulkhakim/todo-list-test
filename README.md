@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Proyek React dengan Vite dan TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah proyek React yang dibangun menggunakan Vite sebagai build tool dan TypeScript sebagai bahasa pemrogramannya. Proyek ini dirancang untuk menjadi template yang cepat, efisien, dan mudah untuk memulai pengembangan aplikasi React dengan konfigurasi modern.
 
-Currently, two official plugins are available:
+## Fitur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Vite**: Build tool yang sangat cepat dengan waktu start-up instan.
+- 🚀 **React 18**: Versi terbaru dari React dengan fitur concurrent rendering.
+- 🛠 **TypeScript**: Menambahkan type safety dan dukungan editor yang lebih baik.
+- 🎨 **Tailwind CSS**: Utilitas CSS untuk styling yang cepat dan responsif (opsional).
+- 🔥 **Hot Module Replacement**: Menyediakan pengalaman pengembangan yang lebih cepat dan efisien.
 
-## Expanding the ESLint configuration
+## Prasyarat
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) versi 14.x atau lebih baru, dan [npm](https://www.npmjs.com/) atau [yarn](https://yarnpkg.com/) sebagai package manager.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalasi
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone repositori ini ke komputer Anda:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/username/repo-name.git
+   cd repo-name
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install dependensi yang diperlukan:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+   ```bash
+   npm install
+   # atau
+   yarn install
+   ```
+
+## Menjalankan Proyek Secara Lokal
+
+Untuk memulai proyek dalam mode pengembangan, jalankan perintah berikut:
+
+```bash
+npm run dev
+# atau
+yarn dev
 ```
